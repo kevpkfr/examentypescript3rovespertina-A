@@ -1,0 +1,17 @@
+<!-- perfumes.component.html -->
+<div>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombreUsuario" />
+
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" [(ngModel)]="edadUsuario" />
+
+  <ul>
+    <li *ngFor="let nombre of nombres">{{ nombre }}</li>
+  </ul>
+
+  <button (click)="eliminarNombre()">Eliminar perfume</button>
+  <div *ngIf="mensaje" class="mensaje">{{ mensaje }}</div>
+
+  <button (click)="resetearValores()">Resetear Valores</button>
+</div>
